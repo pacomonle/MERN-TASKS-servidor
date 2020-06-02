@@ -20,7 +20,7 @@ app.use( express.json({extended: true }))
 
 
 // crear puerto de la app
-const PORT = process.env.PORT || 4000
+const port = process.env.port || 4000
 
 
 // importar nuestras rutas - middleware
@@ -30,7 +30,7 @@ app.use('/api/proyectos', require('./routes/proyectos'));
 app.use('/api/tareas', require('./routes/tareas'));
 
 // arrancar la app (servidor)
-app.listen(PORT, () => {
+app.listen(port, '0.0.0.0', () => {
     console.log(`Servidor corriendo en http://localhost:${PORT}`)
 })
 
